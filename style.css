@@ -1,0 +1,203 @@
+* { 
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+a { 
+    color: white;
+    text-decoration: none;
+}
+img  { 
+    width: 200px
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+padding: 25px 9%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
+visibility: hidden;
+opacity: 0;
+animation: show-content 1.5s linear forwards;
+animation-delay: 1.2s;
+}
+
+@keyframes show-content {
+    100% { 
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.navbar .logo {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.navbar ul { 
+display: flex;
+}
+
+.navbar ul li { 
+    list-style: none;
+    margin-left: 35px;
+}
+
+.navbar ul li a { 
+    font-size: 20px;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.navbar ul li:hover a, .navbar ul li:active a {
+    color: teal;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: white;
+    visibility: hidden;
+opacity: 0;
+animation: show-content 1.5s linear forwards;
+animation-delay: 1.6s;
+}
+
+.home-content h1 { 
+    font-size: 55px;
+}
+.home-content h2 { 
+    display: inline-block;
+    weight: 20;
+    font-size: 32px;
+    margin-top: -10px;
+}
+
+.home-content h2 span {
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .7px teal;
+}
+
+.home-content p { 
+    font-size: 16px;
+    margin: 10px 0 25px;
+}
+
+.home-content .btn-sci { 
+    display: flex;
+    align-items: center;
+
+}
+
+.btn { 
+    display: inline-block;
+    padding: 10px 30px;
+    background: teal;
+    border: 2px solid teal;
+    border-radius: 40px;
+    box-shadow: 0 0 10px teal;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+
+.btn:hover { 
+    background: transparent;
+    color: grey;
+    box-shadow: none;
+
+}
+
+.home-content .btn-sci .sci { 
+    margin-left: 20px;
+}
+
+.home-content .btn-sci .sci a {
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid teal;
+    border-radius: 50%;
+    font-size: 20px;
+    color: teal;
+    margin: 0 8px;
+    transition: .5s;
+}
+
+.home-content .btn-sci .sci a:hover { 
+    background: teal;
+    color: grey;
+    box-shadow: 0 0 10px teal;
+}
+
+.home-img .img-box { 
+    width: 32vw;
+    height: 32vw;
+    background: teal;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img .img-box::before, .home-img .img-box::after {
+content: '';
+position: absolute;
+
+}
+
+.home-img .img-box .img-item { 
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: teal;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.home-img .img-box .img-item img { 
+    position: absolute;
+    display: block;
+    width: 85%;
+    object-fit: cover;
+}
+
+img {
+    border-radius: 5%;
+}
+.bars-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: -1;
+}
+
+.bars-animation .bar {
+width: 100%;
+height: 100%;
+background: black;
+transform: translateY(-100%);
+animation: show-bars .5s ease-in-out forwards;
+animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes show-bars {
+    100% {
+        transform: translateY(0%);
+    }
+
+}
