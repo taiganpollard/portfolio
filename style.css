@@ -192,6 +192,7 @@ img {
         background-color: var(--dark);
         text-align: center;
         border: 20px solid teal;
+        box-shadow: 0 0 40px teal;
         padding: var(--padding);
         color: white;
         position: relative;
