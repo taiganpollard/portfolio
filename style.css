@@ -199,5 +199,4 @@ animation-delay: calc(.1s * var(--i));
     100% {
         transform: translateY(0%);
     }
-
 }
